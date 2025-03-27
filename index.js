@@ -8,7 +8,9 @@ import { Server } from "socket.io";
 export const app = express()
 
 await bootstrap(app, express);
-
+app.get("/",(req ,res ,next)=>{
+    return res.status(200).json({msg:"success"})
+})
 
 export const express_server = app.listen(process.env.PORT, (error) => {
     (error) ? console.log('Express Server Error: ', error.message) : console.log("Express Server is Running")
