@@ -5,7 +5,7 @@ import { Server } from "socket.io";
 
 
 
-const app = express()
+export const app = express()
 
 await bootstrap(app, express);
 
