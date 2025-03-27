@@ -3,9 +3,7 @@ import userRouter from './modules/user/user.controller.js'
 import cors from 'cors'
 
 const bootstrap = async (app, express) => {
-    app.use(cors({
-        origin: "*"
-    }))
+    app.use(cors())
     app.use(express.json())
 
 
