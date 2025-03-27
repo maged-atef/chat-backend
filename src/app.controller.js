@@ -11,7 +11,7 @@ const bootstrap = async (app, express) => {
 
     connect_to_db();
     app.get('/',(req, res, next)=>{
-       return res.status(200).json({ success: true, msg: 'welcome ' })
+      res.status(200).json({ success: true, msg: 'welcome ' })
 
     })
     app.use('/user', userRouter)
